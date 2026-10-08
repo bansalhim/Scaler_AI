@@ -1,0 +1,80 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: "Inter", system-ui, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-panel: var(--panel);
+  --color-header: var(--header);
+  --color-active: var(--active);
+  --color-incoming: var(--incoming);
+  --color-outgoing: var(--outgoing);
+  --color-online: var(--online);
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: #121212;
+  --foreground: #f2f2f2;
+  --card: #1e1e1e;
+  --card-foreground: #f2f2f2;
+  --popover: #262626;
+  --popover-foreground: #f2f2f2;
+  --primary: #2c6bed;
+  --primary-foreground: #ffffff;
+  --secondary: #2c2c2e;
+  --secondary-foreground: #f2f2f2;
+  --muted: #2c2c2e;
+  --muted-foreground: #8e8e93;
+  --accent: #2a2a2d;
+  --accent-foreground: #f2f2f2;
+  --destructive: #ff453a;
+  --destructive-foreground: #ffffff;
+  --border: #2f2f31;
+  --input: #2c2c2e;
+  --ring: #2c6bed;
+  --panel: #1e1e1e;
+  --header: #262626;
+  --active: #2a2a2d;
+  --incoming: #2c2c2e;
+  --outgoing: #2c6bed;
+  --online: #30d158;
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html, body { height: 100%; }
+  body { background-color: var(--color-background); color: var(--color-foreground); font-family: var(--font-sans); }
+}
+
+@keyframes typing-dot { 0%, 60%, 100% { opacity: .3; transform: translateY(0) } 30% { opacity: 1; transform: translateY(-3px) } }
+@utility typing-dot { animation: typing-dot 1.2s infinite ease-in-out; }
+@utility thin-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-muted) transparent;
+}
