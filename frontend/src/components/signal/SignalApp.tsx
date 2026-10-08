@@ -41,7 +41,8 @@ export interface Message {
   created_at?: string;
 }
 
-const API_BASE = "http://localhost:8000/api";
+const API_BASE = "https://scaler-ai-ffqo.onrender.com/api";
+const WS_BASE = "wss://scaler-ai-ffqo.onrender.com/ws/chat";
 
 async function fetchConversations(): Promise<Conversation[]> {
   const res = await fetch(`${API_BASE}/conversations`);
@@ -119,7 +120,7 @@ export const SignalApp: React.FC = () => {
       socketRef.current.close();
     }
 
-    const wsUrl = `ws://localhost:8000/ws/chat/${activeId}`;
+    const wsUrl = `${WS_BASE}/${activeId}`;
     const ws = new WebSocket(wsUrl);
 
     ws.onmessage = (event: MessageEvent) => {
@@ -205,7 +206,7 @@ export const SignalApp: React.FC = () => {
     formData.append("file", file);
 
     try {
-      const res = await fetch("http://localhost:8000/api/upload", {
+      const res = await fetch(`${API_BASE}/upload`, {
         method: "POST",
         body: formData,
       });
