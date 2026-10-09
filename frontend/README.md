@@ -3,23 +3,17 @@
 A full-stack, real-time messaging application inspired by Signal, featuring instant bidirectional chat, automated contact replies, live typing indicators, image uploads, and customizable conversations.
 
 ## 🚀 Live Demo
-
-- **Frontend (Vercel):** [https://scaler-signal-app.vercel.app](https://scaler-signal-app.vercel.app) *(Replace with your Vercel URL)*
-- **Backend API (Render):** [https://scaler-ai.onrender.com](https://scaler-ai.onrender.com) *(Replace with your Render URL)*
-
----
+- **Frontend (Vercel):** [https://scaler-ai-ivory.vercel.app](https://scaler-ai-ivory.vercel.app)
+- **Backend API (Render):** Hosted via Render (Access `/docs` for Swagger UI documentation)
 
 ## ✨ Features
-
-- **⚡ Real-Time WebSockets:** Instant message delivery and status updates with automatic reconnect handling.
-- **💬 Bot Auto-Replies:** Simulated automated responses and dynamic live typing indicators (`...is typing`).
-- **📸 Media Attachments:** Support for uploading image files with instant inline chat previews.
-- **📌 Read Receipts & Timestamps:** Real-time delivered double-check indicators ($\checkmark\checkmark$) and formatted message timestamps.
-- **➕ Direct Message Creation:** Start new direct message channels dynamically via modal dialogs.
-- **😀 Interactive Emoji Palette:** Integrated quick-insert emoji drawer for expressiveness.
-- **🔒 E2E Visual Design:** High-fidelity Signal dark mode styled using Tailwind CSS and Lucide icons.
-
----
+- ⚡ **Real-Time WebSockets:** Instant message delivery and status updates with automatic reconnect handling.
+- 💬 **Bot Auto-Replies:** Simulated automated responses and dynamic live typing indicators (`...is typing`).
+- 📸 **Media Attachments:** Support for uploading image files with instant inline chat previews.
+- 📌 **Read Receipts & Timestamps:** Real-time delivered double-check indicators (✓✓) and formatted message timestamps.
+- ➕ **Direct Message Creation:** Start new direct message channels dynamically via modal dialogs.
+- 😀 **Interactive Emoji Palette:** Integrated quick-insert emoji drawer for expressiveness.
+- 🔒 **E2E Visual Design:** High-fidelity Signal dark mode styled using Tailwind CSS and Lucide icons.
 
 ## 🛠️ Tech Stack
 
@@ -35,10 +29,7 @@ A full-stack, real-time messaging application inspired by Signal, featuring inst
 - **Real-Time Engine:** WebSockets (`ConnectionManager`)
 - **File Uploads:** `python-multipart` with static directory serving
 
----
-
 ## 📁 Project Structure
-
 ```text
 Scaler_AI/
 ├── backend/
@@ -46,6 +37,8 @@ Scaler_AI/
 │   ├── database.py          # SQLite database connection setup
 │   ├── models.py            # SQLAlchemy models (User, Conversation, Message)
 │   ├── requirements.txt     # Python backend dependencies
+│   ├── seed.py              # Database seeding script
+│   ├── signal.db            # SQLite database file
 │   └── uploads/             # Static file storage directory for images
 │
 └── frontend/
