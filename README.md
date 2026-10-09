@@ -4,7 +4,7 @@ A full-stack, real-time messaging application inspired by Signal, featuring inst
 
 ## 🚀 Live Demo
 - **Frontend (Vercel):** [https://scaler-ai-ivory.vercel.app](https://scaler-ai-ivory.vercel.app)
-- **Backend API (Render):** [https://scaler-ai.onrender.com](https://scaler-ai.onrender.com) *(Hosted via Render Web Service)*
+- **Backend API (Render):** Hosted via Render (Access `/docs` for Swagger UI documentation)
 
 ## ✨ Features
 - ⚡ **Real-Time WebSockets:** Instant message delivery and status updates with automatic reconnect handling.
